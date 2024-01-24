@@ -28,15 +28,80 @@ form button {
     margin-left: auto;
 }
 
-h1 {
-    
+nav {
+    margin-top: 4rem;
 }
 
+nav a {
+    padding: 5px;
+    color: teal;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: teal;
+    color: white;
+}
+
+nav ul {
+    display: flex;
+    width: 8rem;
+    list-style-type: none;
+    line-height: 30px;
+    flex-direction: column;
+    text-align: right;
+}
+
+main {
+    margin-top: -8.5rem;
+    padding-left: 200px;
+    text-align: justify;
+}
+
+.img {
+    width: 12rem;
+    height: 8rem;
+    float: left;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 600px) {
+
+    nav {
+        margin-top: 1rem;
+    }
+
+    nav ul {
+        flex-direction: row;
+        width: 20rem;
+    }
+
+    nav li {
+        border-right: 1px solid grey;
+    }
+
+    main {
+        padding-top: 8rem;
+        margin-left: -10rem;
+    }
+}
+
+h2 {
+    margin-top: 2.5rem;
+}
 /* HEADER STYLES */
 header {
     background-color: teal;
-    color: white;
+    color: black;
     padding: 1rem;
     margin-bottom: 1rem;
+    text-align: center;
+}
+
+footer {
+    background-color: teal;
+    color: white;
+    padding: 1rem;
+    margin-top: 20rem;
     text-align: center;
 }
