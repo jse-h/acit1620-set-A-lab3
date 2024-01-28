@@ -28,10 +28,6 @@ form button {
     margin-left: auto;
 }
 
-nav {
-    height: auto;
-}
-
 nav a {
     padding: 5px;
     color: teal;
@@ -75,12 +71,17 @@ main {
     nav ul {
         flex-direction: row;
         width: 20rem;
-        margin-top: -15px; /* Moves the nav bar closer top to the header*/
+        height: 20px;
+        margin-bottom: 20px;
+        line-height: 20px; /*adjust line-height tag to fix spacing*/
     }
 
     nav a {
         margin-right: 10px;
-        border-left: 1px solid lightgrey; /*1px sized borders, can't figure out how to make shorter though*/
+    }
+
+    nav li:not(:last-child) {
+        border-right: 1px solid lightgrey;
     }
 
     /*Translating the img and paragraph to be under navbar and left of screen*/
@@ -115,5 +116,5 @@ footer {
 /*
 Things want to learn or figure out: 
 - remove white space between footer and nav
-- adjust borders between menu buttons to be shorter
+- adjust borders between menu buttons to be shorter// SOLVED: just line-height was affecting the spacing and border needed a height tag
 */
