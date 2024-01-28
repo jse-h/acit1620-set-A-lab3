@@ -30,13 +30,11 @@ form button {
 
 nav {
     height: auto;
-    border: 2px solid red;
 }
 
 nav a {
     padding: 5px;
     color: teal;
-    border: 2px solid orange;
     text-decoration: none;
 }
 
@@ -47,28 +45,28 @@ nav a:hover {
 
 nav ul {
     display: flex;
-    border: 2px solid green;
     width: 8rem;
     list-style-type: none;
     line-height: 50px;
-    flex-direction: column;
+    flex-direction: column; /*Navbar is column when width > 600px*/
     text-align: right;
     padding-bottom: 20px;
 }
 
 main {
-    border: 2px solid blue;
-    margin-top: -12rem;
+    margin-top: -11rem;
     margin-right: 2rem;
-    padding-left: 200px;
-    text-align: justify;
+    padding-left: 200px; /*Need padding to have our content in the screen and not over our navbar or off screen*/
+    text-align: justify; /* Stretches lines so they are all lines of paragraph are equal width. probably still ok removing this*/
 }
 
 .img {
     float: left;
     width: 12rem;
     height: 8rem;
+    /*Spacing out text away from right and bottom of image*/
     margin-right: 1rem;
+    margin-bottom: 1rem;
 }
 
 @media screen and (max-width: 600px) {
@@ -77,21 +75,23 @@ main {
     nav ul {
         flex-direction: row;
         width: 20rem;
+        margin-top: -15px; /* Moves the nav bar closer top to the header*/
     }
 
-    /* Borders are too long*/
-    nav li {
-        border-right: 1px solid grey;
+    nav a {
+        margin-right: 10px;
+        border-left: 1px solid lightgrey; /*1px sized borders, can't figure out how to make shorter though*/
     }
 
+    /*Translating the img and paragraph to be under navbar and left of screen*/
     main {
         padding-top: 8rem;
-        margin-left: -10rem;
+        margin-left: -10rem; /* Spaces it out from left side of screen so it isn't directly touching*/
         margin-top: -10rem;
     }
 
     h2 {
-        margin-top: 2.5rem;
+        margin-top: 2.5rem; /*Mainly for adjusting About and Contact spacing*/
     }
 
 }
@@ -111,3 +111,9 @@ footer {
     margin-top: 20rem;
     text-align: center;
 }
+
+/*
+Things want to learn or figure out: 
+- remove white space between footer and nav
+- adjust borders between menu buttons to be shorter
+*/
