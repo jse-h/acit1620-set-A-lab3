@@ -29,12 +29,14 @@ form button {
 }
 
 nav {
-    margin-top: 4rem;
+    height: auto;
+    border: 2px solid red;
 }
 
 nav a {
     padding: 5px;
     color: teal;
+    border: 2px solid orange;
     text-decoration: none;
 }
 
@@ -45,37 +47,39 @@ nav a:hover {
 
 nav ul {
     display: flex;
+    border: 2px solid green;
     width: 8rem;
     list-style-type: none;
-    line-height: 30px;
+    line-height: 50px;
     flex-direction: column;
     text-align: right;
+    padding-bottom: 20px;
 }
 
 main {
-    margin-top: -8.5rem;
+    border: 2px solid blue;
+    margin-top: -12rem;
+    margin-right: 2rem;
     padding-left: 200px;
     text-align: justify;
 }
 
 .img {
+    float: left;
     width: 12rem;
     height: 8rem;
-    float: left;
     margin-right: 1rem;
 }
 
 @media screen and (max-width: 600px) {
 
-    nav {
-        margin-top: 1rem;
-    }
 
     nav ul {
         flex-direction: row;
         width: 20rem;
     }
 
+    /* Borders are too long*/
     nav li {
         border-right: 1px solid grey;
     }
@@ -83,11 +87,13 @@ main {
     main {
         padding-top: 8rem;
         margin-left: -10rem;
+        margin-top: -10rem;
     }
-}
 
-h2 {
-    margin-top: 2.5rem;
+    h2 {
+        margin-top: 2.5rem;
+    }
+
 }
 /* HEADER STYLES */
 header {
